@@ -85,14 +85,15 @@ Route::get('/fecha3', function() {
     $dia = date("D");
     $mes = date("F");
     $year = date("Y");
-    return view('/prueba/fecha') 
-    ->with('dia', $dia)
-    ->with('mes', $mes)
-    ->with('year', $year);
+
+    return view('/prueba/fecha')
+                ->with('dia', $dia)
+                ->with('mes', $mes)
+                ->with('year', $year);
 });
 
 Route::get('/error404', function () {
-    return view('/prueba/error404')
+    return view('/prueba/error404');
 });
 
 Route::get('/dashboard', function () {
