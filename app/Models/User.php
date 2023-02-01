@@ -41,4 +41,9 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    //Se define la relación 1:1 entre usuario y perfil
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
 }
